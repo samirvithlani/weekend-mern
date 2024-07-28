@@ -1,0 +1,21 @@
+component based architecture
+to comunication between components we have 3 ways
+1) props
+
+    parent to child component communication
+
+what is props?
+1) props is a object
+2) props is a read only object
+3) props is a uni-directional flow
+4) props is a way to pass data from parent to child component
+
+
+limitations of props
+a-->b-->c*
+
+props drilling
+
+---------------------------
+2) context
+3) redux
