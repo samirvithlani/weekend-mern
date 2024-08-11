@@ -17,5 +17,22 @@ a-->b-->c*
 props drilling
 
 ---------------------------
+
+
+virtual dom:
+dom:document object model
+
+original > copy > light weight copy > virtual dom
+
+if any changes in virtual dom then only it will update in original dom
+
+hook: any builtin or lifecycle method in functional component
+useState:
+
+
+
+
+
+
 2) context
 3) redux

@@ -3,6 +3,8 @@ import './App.css';
 import { Content } from './components/Content';
 import Header from './components/Header';
 import { MapDemo1 } from './components/MapDemo1';
+import { UseStateDemo } from './components/UseStateDemo';
+import { UseStateDemo2 } from './components/UseStateDemo2';
 
 function App() {
 
@@ -20,8 +22,10 @@ const test = () => {
     <div className="App">
       {/* <button onClick={test}>Test</button> */}
       <Header title ={title} d = {data} test={test}></Header>
+      {/* <UseStateDemo></UseStateDemo> */}
+      <UseStateDemo2></UseStateDemo2>
       {/* <Content></Content> */}
-      <MapDemo1 title = {title}></MapDemo1>
+      {/* <MapDemo1 title = {title}></MapDemo1> */}
     </div>
   );
 }

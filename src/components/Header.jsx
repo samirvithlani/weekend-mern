@@ -10,7 +10,7 @@ export default function Header(props) {
         <h1>HEADER - {props.d.country} - {props.title}</h1>
         <button onClick={props.test}>Test</button>
         <button onClick={()=>{props.test()}}>test 1</button>
-        <SubHeader title = {props.title}></SubHeader>
+        {/* <SubHeader title = {props.title}></SubHeader> */}
     </div>
   )
 }
