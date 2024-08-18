@@ -6,6 +6,11 @@ import { MapDemo1 } from './components/MapDemo1';
 import { UseStateDemo } from './components/UseStateDemo';
 import { UseStateDemo2 } from './components/UseStateDemo2';
 import { FormDemo1 } from './components/FormDemo1';
+import { Navbar } from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import { AmazonHome } from './components/amazon/AmazonHome';
+import { AmazonProducts } from './components/amazon/AmazonProducts';
+import { Error404 } from './components/amazon/Error404';
 
 function App() {
 
@@ -21,8 +26,16 @@ const test = () => {
   
   return (
     <div className="App">
+      <Navbar></Navbar>
+      <Routes>
+        <Route path = "/" element = {<h1>HOME PAGE</h1>}></Route>
+        <Route path="/amazonhome" element = {<AmazonHome/>}></Route>
+        <Route path = "/amazonproduct" element = {<AmazonProducts/>}></Route>
+        {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
+        <Route path = "*" element = {<Error404/>}></Route>
+      </Routes>
       {/* <button onClick={test}>Test</button> */}
-      <Header title ={title} d = {data} test={test}></Header>
+      {/* <Header title ={title} d = {data} test={test}></Header> */}
       {/* <UseStateDemo></UseStateDemo> */}
       {/* <UseStateDemo2></UseStateDemo2> */}
       {/* <FormDemo1/> */}

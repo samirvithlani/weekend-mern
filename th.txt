@@ -29,10 +29,14 @@ if any changes in virtual dom then only it will update in original dom
 hook: any builtin or lifecycle method in functional component
 useState:
 
-
-
-
-
-
 2) context
 3) redux
+
+
+component --> comp --> urls
+react-router-dom
+<BrowseRouter>
+<Routes>
+        <Route></Route>
+</Routes>
+</BrowseRouter> ---> enable routes in your react application
