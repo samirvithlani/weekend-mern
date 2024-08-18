@@ -11,6 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 import { AmazonHome } from './components/amazon/AmazonHome';
 import { AmazonProducts } from './components/amazon/AmazonProducts';
 import { Error404 } from './components/amazon/Error404';
+import { ProductDetail } from './components/amazon/ProductDetail';
 
 function App() {
 
@@ -31,6 +32,7 @@ const test = () => {
         <Route path = "/" element = {<h1>HOME PAGE</h1>}></Route>
         <Route path="/amazonhome" element = {<AmazonHome/>}></Route>
         <Route path = "/amazonproduct" element = {<AmazonProducts/>}></Route>
+        <Route path ="/amazonproduct/productdetail/:id" element = {<ProductDetail/>}></Route>
         {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<Error404/>}></Route>
       </Routes>
