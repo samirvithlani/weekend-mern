@@ -5,7 +5,7 @@ import Header from './components/Header';
 import { MapDemo1 } from './components/MapDemo1';
 import { UseStateDemo } from './components/UseStateDemo';
 import { UseStateDemo2 } from './components/UseStateDemo2';
-import { FormDemo1 } from './components/FormDemo1';
+import { FormDemo1 } from './forms/FormDemo1';
 import { Navbar } from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import { AmazonHome } from './components/amazon/AmazonHome';
@@ -33,6 +33,7 @@ const test = () => {
         <Route path="/amazonhome" element = {<AmazonHome/>}></Route>
         <Route path = "/amazonproduct" element = {<AmazonProducts/>}></Route>
         <Route path ="/amazonproduct/productdetail/:id" element = {<ProductDetail/>}></Route>
+        <Route path ="/formdemo1" element = {<FormDemo1/>}></Route>
         {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<Error404/>}></Route>
       </Routes>

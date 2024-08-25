@@ -40,3 +40,21 @@ react-router-dom
         <Route></Route>
 </Routes>
 </BrowseRouter> ---> enable routes in your react application
+
+
+
+handleSubmmit = (cb)=>{
+
+    //register.. input... states... name email age...
+    obj = {
+
+        name:this.state.name,
+        email:this.state.email,
+        age:this.state.age
+    }
+
+    cb(obj)
+
+
+}
+
