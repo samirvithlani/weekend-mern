@@ -12,6 +12,7 @@ import { AmazonHome } from './components/amazon/AmazonHome';
 import { AmazonProducts } from './components/amazon/AmazonProducts';
 import { Error404 } from './components/amazon/Error404';
 import { ProductDetail } from './components/amazon/ProductDetail';
+import { FormDemo2 } from './forms/FormDemo2';
 
 function App() {
 
@@ -34,6 +35,7 @@ const test = () => {
         <Route path = "/amazonproduct" element = {<AmazonProducts/>}></Route>
         <Route path ="/amazonproduct/productdetail/:id" element = {<ProductDetail/>}></Route>
         <Route path ="/formdemo1" element = {<FormDemo1/>}></Route>
+        <Route path='/formdemo2' element = {<FormDemo2/>}></Route>
         {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<Error404/>}></Route>
       </Routes>
