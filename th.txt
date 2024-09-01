@@ -70,3 +70,19 @@ handleSubmmit = (cb)=>{
                 message:"Age is required*"
             }
         }
+
+
+api -- create ---> react 
+
+js --> fetch function --> ajax call
+-->axios package
+
+GET : fetch
+POST : create
+PUT  : update
+DELETE : delete
+PATCH: partial update
+
+https://uiverse.io/loaders
+
+npm i react-toastify
