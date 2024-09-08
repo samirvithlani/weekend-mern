@@ -14,6 +14,7 @@ import { Error404 } from './components/amazon/Error404';
 import { ProductDetail } from './components/amazon/ProductDetail';
 import { FormDemo2 } from './forms/FormDemo2';
 import { ApiDemo1 } from './api/ApiDemo1';
+import { OmdbAPi } from './api/OmdbAPi';
 
 function App() {
 
@@ -38,6 +39,7 @@ const test = () => {
         <Route path ="/formdemo1" element = {<FormDemo1/>}></Route>
         <Route path='/formdemo2' element = {<FormDemo2/>}></Route>
         <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
+      <Route path="/omdb" element = {<OmdbAPi/>}></Route>
         {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<Error404/>}></Route>
       </Routes>
