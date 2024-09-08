@@ -4,10 +4,14 @@ import { set } from "react-hook-form";
 import { MyLoader } from "../components/MyLoader";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Button, Modal } from "react-bootstrap";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
   const [isLoading, setisLoading] = useState(false);
+  const [show, setshow] = useState(false);
+  const [singleUser, setsingleUser] = useState({});
+  const handleClose = () => setshow(false);
 
   const getApiCall = async () => {
     //then catch -- async await
@@ -38,9 +42,17 @@ export const ApiDemo1 = () => {
         progress: undefined,
         theme: "dark",
         transition: Bounce,
-        });
+      });
       getApiCall();
     }
+  };
+
+  const getUserDetail = async (id) => {
+    const res = await axios.get("https://node5.onrender.com/user/user/" + id);
+    console.log("axios response...", res); //axios response object
+    setsingleUser(res.data.data);
+
+    setshow(true);
   };
 
   return (
@@ -99,12 +111,39 @@ export const ApiDemo1 = () => {
                   >
                     DELETE
                   </button>
+                  <button
+                    onClick={() => {
+                      getUserDetail(user._id);
+                    }}
+                    className="btn btn-warning"
+                    style={{ marginLeft: "2px" }}
+                  >
+                    DETAIL
+                  </button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{singleUser?.name}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Email: {singleUser?.email}</p>
+          <p>Age: {singleUser?.age}</p>
+          <p>Status: {singleUser?.isActive ? "Active" : "Not Active"}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
