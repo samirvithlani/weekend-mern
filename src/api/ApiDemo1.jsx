@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { set } from "react-hook-form";
 import { MyLoader } from "../components/MyLoader";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -47,6 +48,10 @@ export const ApiDemo1 = () => {
     }
   };
 
+  useEffect(() => {
+    getApiCall();
+  }, []);
+
   const getUserDetail = async (id) => {
     const res = await axios.get("https://node5.onrender.com/user/user/" + id);
     console.log("axios response...", res); //axios response object
@@ -75,13 +80,13 @@ export const ApiDemo1 = () => {
         } */}
       {isLoading && <MyLoader />}
       <h1 style={{ textAlign: "center" }}>API DEMO 1</h1>
-      <button
+      {/* <button
         onClick={() => {
           getApiCall();
         }}
       >
         GET API CALL
-      </button>
+      </button> */}
       <table className="table table-dark">
         <thead>
           <tr>
@@ -120,6 +125,13 @@ export const ApiDemo1 = () => {
                   >
                     DETAIL
                   </button>
+                  <Link
+                    to={`/updateuser/${user._id}`}
+                    className="btn btn-primary"
+                    style={{ marginLeft: "2px" }}
+                  >
+                    UPDATE
+                  </Link>
                 </td>
               </tr>
             );

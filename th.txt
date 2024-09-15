@@ -86,3 +86,7 @@ PATCH: partial update
 https://uiverse.io/loaders
 
 npm i react-toastify
+
+useEffect : hook: lifecycle method in functional component
+to handle side effects in functional component
+side effects : api calls, event listeners, timers, subscriptions
