@@ -30,6 +30,7 @@ hook: any builtin or lifecycle method in functional component
 useState:
 
 2) context
+      parent to child and most child... global state management
 3) redux
 
 
