@@ -32,6 +32,46 @@ useState:
 2) context
       parent to child and most child... global state management
 3) redux
+redux is state management library use to transfer data from one component to another component
+
+
+redux toolkit
+npm install @reduxjs/toolkit
+npm install react-redux
+
+
+
+tradinational redux approch
+
+action 
+reducer
+container
+
+redux: action : will have 2 params
+state, action
+
+https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
+
+switch case:
+
+reducer: function(state, action){
+    switch(action.type){
+        case "ADD":
+            return state+action.payload
+        case "SUB":
+            return state-action.payload
+        default:
+            return state
+    }
+}
+
+
+
+
+
+
+
+
 
 
 component --> comp --> urls
@@ -91,3 +131,6 @@ npm i react-toastify
 useEffect : hook: lifecycle method in functional component
 to handle side effects in functional component
 side effects : api calls, event listeners, timers, subscriptions
+
+
+

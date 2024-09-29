@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MyButton } from "../common/MyButton";
 
 export const ApiDemo2 = () => {
   const { register, handleSubmit } = useForm();
@@ -44,8 +45,12 @@ export const ApiDemo2 = () => {
       //alert // toast
     }
   };
+  const test = () => {
+    alert("Hello");
+  }
   return (
     <div>
+      <MyButton name="test" class="btn btn-info" clickHandler={test} height="100px"></MyButton>
       <ToastContainer
         position="top-center"
         autoClose={3000}
