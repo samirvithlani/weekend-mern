@@ -11,8 +11,8 @@ const cartSlice = createSlice({
             //state --> initial state state.cart --> cart array
             //action ->1)type 2)payload :object
             //type:"cart/addToCart"
-            console.log("action",action)
-            console.log("state",state.cart)
+            //console.log("action",action)
+            //console.log("state",state.cart)
             state.cart.push(action.payload)
 
         }

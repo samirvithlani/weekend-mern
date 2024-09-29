@@ -67,6 +67,10 @@ reducer: function(state, action){
 
 
 
+yt:dark theme : --> local storage --> load --> localstroage --> dark theme --> redux store -->
+
+change -> store --> local stareg
+
 
 
 
