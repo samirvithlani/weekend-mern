@@ -20,6 +20,7 @@ import { UpdateUser } from './api/UpdateUser';
 import { ApiDemo2 } from './api/ApiDemo2';
 import { Blogs } from './components/blogs/Blogs';
 import { ProductComp } from './components/ProductComp';
+import { BankComponent } from './components/BankComponent';
 
 function App() {
 
@@ -50,6 +51,7 @@ const test = () => {
       <Route path='/apidemo2' element ={<ApiDemo2/>}></Route>
       <Route path='/blogs' element ={<Blogs/>}></Route>
       <Route path="/prod" element = {<ProductComp/>}></Route>
+      <Route path='/bankcomp' element = {<BankComponent/>}></Route>
         {/* <Route path = "/*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<Error404/>}></Route>
       </Routes>

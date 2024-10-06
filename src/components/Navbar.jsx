@@ -7,7 +7,9 @@ export const Navbar = () => {
 
   //const state = useSelector((state)=>state)
   const cartState = useSelector((state)=>state.cart.cart)
+  const bankState = useSelector((state)=>state.bank.balance)
   console.log("state",cartState)
+  console.log("state",bankState)
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -49,8 +51,16 @@ export const Navbar = () => {
         <Link class="nav-link" to="/prod">products</Link>
       </li>  
       <li class="nav-item">
-        {
+        <Link class="nav-link" to="/bankcomp">Bank Comp</Link>
+      </li>  
+      {/* <li class="nav-item">
+        CArt{
           cartState?.length
+        }
+      </li>    */}
+      <li class="nav-item">
+        Bank Amount: {
+          bankState
         }
       </li>   
     </ul>
