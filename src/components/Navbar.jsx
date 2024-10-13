@@ -46,7 +46,14 @@ export const Navbar = () => {
       </li>   
       <li class="nav-item">
         <Link class="nav-link" to="/blogs">blogs</Link>
+      
       </li>   
+      <li class="nav-item">
+        <Link class="nav-link" to="/nodeapi">Node Api</Link>
+      </li>  
+      <li class="nav-item">
+        <Link class="nav-link" to="/emphome">Employee Home</Link>
+      </li>  
       <li class="nav-item">
         <Link class="nav-link" to="/prod">products</Link>
       </li>  

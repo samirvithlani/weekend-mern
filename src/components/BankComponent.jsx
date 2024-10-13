@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { deposit } from '../redux/bankSlice'
-import { useDispatch } from 'react-redux'
+  import { useDispatch } from 'react-redux'
 
 export const BankComponent = () => {
   const [depositAmount, setdeposit] = useState(0)

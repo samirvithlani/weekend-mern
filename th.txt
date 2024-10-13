@@ -137,4 +137,20 @@ to handle side effects in functional component
 side effects : api calls, event listeners, timers, subscriptions
 
 
+----------------------------------------------------------------
+employee management:
+get all employees api : 20 component: 20 api call.. cost : 1rs per call :20rs
+
+1 api call:- employee data : redux store:
+
+19 components: redux store data:---
+
+redux middleware: redux-thunk
+
+promise: pending, resolved, rejected
+
+
+
+
+
 
